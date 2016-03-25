@@ -1,6 +1,7 @@
 class JobsController < ApplicationController
 
   before_action :find_job, only: [:show, :edit, :update, :destroy]
+  before_action :set_instance_var, only:[:new, :edit]
 
   def index
     @jobs = Job.all.order("created_at DESC")
@@ -46,7 +47,11 @@ class JobsController < ApplicationController
   end
 
   def jobs_params
-    params.require(:job).permit(:title, :description, :company, :url)
+    params.require(:job).permit(:title, :description, :company, :url, :category)
+  end
+
+  def set_instance_var
+    @categories = Job.categories
   end
 
 end

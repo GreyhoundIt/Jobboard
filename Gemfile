@@ -4,6 +4,7 @@ source 'https://rubygems.org'
 gem 'simple_form', '~> 3.2', '>= 3.2.1'
 gem 'haml', '~> 4.0', '>= 4.0.7'
 gem 'bootstrap-sass', '~> 3.2.0.2'
+gem 'enum_help'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.4'
