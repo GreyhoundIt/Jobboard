@@ -4,7 +4,12 @@ class JobsController < ApplicationController
   before_action :set_instance_var, only:[:new, :edit]
 
   def index
-    @jobs = Job.all.order("created_at DESC")
+    if params[:category].blank?
+			@jobs = Job.all.order("created_at DESC")
+		else
+			#@category_id = Category.find_by(name: params[:category]).id
+			@jobs = Job.where(category: params[:category]).order("created_at DESC") 
+		end
   end
 
   def show
