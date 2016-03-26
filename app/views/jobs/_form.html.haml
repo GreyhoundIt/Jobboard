@@ -1,8 +1,8 @@
 = simple_form_for(@job, html: { class: 'form-horizontal' }) do |f|
-  = f.input :title, label: "Job Title"
-  = f.select :category, options_for_select(@categories.collect { |c| [c[0].humanize, c[0]]}, selected:@job.category), {}
-  = f.input :description, label: "Job Description"
-  = f.input :company, label: "Your Company"
-  = f.input :url, lable: "Website"
+  = f.input :title, label: "Job Title", input_hyml: { class: "form-control"}
+  = f.select :category, options_for_select(@categories.collect { |c| [c[0].humanize, c[0]]}, selected:@job.category), {} , input_hyml: { class: "dropdown-toggle"}
+  = f.input :description, label: "Job Description", input_hyml: { class: "form-control"}
+  = f.input :company, label: "Your Company", input_hyml: { class: "form-control"}
+  = f.input :url, lable: "Website", input_hyml: { class: "form-control"}
   %br
   =f.button :submit
