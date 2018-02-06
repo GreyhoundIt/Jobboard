@@ -1,6 +1,8 @@
 == README
 
-Job Avertising site but using enums in the model instead of creating a new model for the job types
+A simple job listings website. 
+
+Create new jobs or use the menues to search for jobs. 
 
 
 * ...
